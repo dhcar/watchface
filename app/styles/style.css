@@ -8,49 +8,54 @@
   width: 90vmin;
   height: 90vmin;
   position: relative;
-  background-color: white;
+  background-color: black;
+  box-shadow: 0px 0px 0px 2px #FAF;
+  animation: pulse 5s linear;
 }
 
 .hand-container{
-  height: 50%;
+  height: 100%;
   position: absolute;
   width: 100%;
   background-color: rgba(0,0,0,0);
-  transform-origin: 50% 100%;
+  transform-origin: 50% 50%;
 }
 
 .hand{
   position: absolute;
-  bottom: 0;
-  border-radius: 3px; 
+  border-radius: 20px;
   left: 50%;
   transform-origin: 50% 100%;
 }
 
 #seconds .hand{
-  width: 0.3%;
-  height: 90%;
-  background-color: green;
-  margin-right: 1px;
-  transform: rotate(180deg);
+  width: 1%;
+  height: 45%;
+  top: 5%;
+  margin-left: -0.5%;
+  background-color: black;
+  right: 0.15%;
+  box-shadow: 0px 0px 0px 3px #DD763A;
   animation: rotate 60s linear infinite;
 }
 
 #minutes .hand{
-  width: 0.6%;
-  height: 70%;
-  margin-right: 2px;
-  background-color: blue;
-  border: 1px solid black;
+  width: 2%;
+  height: 35%;
+  top: 15%;
+  margin-left: -1%;
+  background-color: black;
+  box-shadow: 0px 0px 0px 3px #5DCFE1;
   animation: rotate 3600s linear infinite;
 }
 
 #hours .hand{
-  width: 1%;
-  height: 50%;
-  margin-right: 3px;
-  background-color: red;
-  border: 1px solid black;
+  width: 3%;
+  height: 25%;
+  top: 25%;
+  margin-left: -1.5%;
+  background-color: black;
+  box-shadow: 0px 0px 0px 3px #49B847;
   animation: rotate 43200s linear infinite;
 }
 
@@ -60,5 +65,14 @@
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  25%{
+    box-shadow: 0px 0px 0px 3px #FAF;
+  }
+  75%{
+    box-shadow: 0px 0px 0px 1px #FAD;
   }
 }
